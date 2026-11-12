@@ -1,0 +1,23 @@
+
+
+name: exercisi-5
+on:
+
+  push:
+    branches: [ "test" ]
+
+jobs:
+ 
+  compile-test-linux:
+ 
+    runs-on: ubuntu-latest
+    steps:
+      -uses: actions/checkout@v6
+        -run: make
+  compile-test-mac:
+     runs-on: ubuntu-latest
+    steps:
+      -uses: actions/checkout@v6
+      -run: make
+    
+
